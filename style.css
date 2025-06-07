@@ -1,0 +1,969 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+input, select, button {
+  padding: 8px;
+  margin-right: 10px;
+  width: 300px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Estilo específico para el botón de registro */
+#btnRegistrarTesista {
+  background-color: #2196F3;
+  font-weight: bold;
+  padding: 12px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+#btnRegistrarTesista:hover {
+  background-color: #0b7dda;
+}
+
+select {
+  height: 35px;
+}
+
+h1, h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el login */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  background-image: url('fondo-facultad.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa de opacidad para mejorar legibilidad */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+/* Asegurar que el contenido esté encima de la capa de opacidad */
+.login-container h1,
+.login-container form,
+.login-container .escuelas-container {
+  position: relative;
+  z-index: 2;
+}
+
+#btnLogin {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Estilos para las imágenes de las escuelas */
+.escuelas-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.escuela-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* Resto de los estilos sin cambios */
+.agregar-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group button {
+  width: 48%;
+}
+
+#btnGuardar {
+  background-color: #4CAF50;
+}
+
+#btnRegresar {
+  background-color: #f44336;
+}
+
+/* Estilos para el menú de segunda ventana */
+.menu-container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.menu-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.menu-button:first-child {
+  background-color: #2196F3;
+}
+
+.menu-button:first-child:hover {
+  background-color: #0d8bf2;
+}
+
+.menu-button:nth-child(2) {
+  background-color: #4CAF50;
+}
+
+.menu-button:nth-child(2):hover {
+  background-color: #45a049;
+}
+
+/* Estilo para el tercer botón (Generar reportes) */
+.menu-button:nth-child(3) {
+  background-color: #ff9800;
+}
+
+.menu-button:nth-child(3):hover {
+  background-color: #e68a00;
+}
+
+/* Estilos para la ventana de seguimiento */
+.seguimiento-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-volver {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.btn-volver:hover {
+  background-color: #d32f2f;
+}
+
+/* Estilos para la tabla de seguimiento */
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.seguimiento-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.seguimiento-table th, 
+.seguimiento-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.seguimiento-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.seguimiento-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.seguimiento-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Estilos para los checkboxes */
+.checkbox-envio {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* Mensaje de carga */
+.loading-message {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #666;
+}
+
+.btn-enviar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.btn-enviar:hover {
+  background-color: #45a049;
+}
+
+.demorados-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-demorados {
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.btn-demorados:hover {
+  background-color: #e68a00;
+}
+
+/* Resaltar filas de tesistas demorados */
+.fila-demorada {
+  background-color: #fff3e0 !important;
+}
+
+.fecha-demorada {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.pendientes-lista {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pendientes-lista li {
+  padding: 4px 0;
+  border-bottom: 1px dotted #eee;
+}
+
+.pendientes-lista li:last-child {
+  border-bottom: none;
+}
+
+/* Estilos para los tipos de participantes */
+.pendiente-asesor {
+  color: #e64a19;
+  font-weight: bold;
+}
+
+.pendiente-presidente {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.pendiente-miembro {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+/* Contenedor de participantes con scroll si hay muchos */
+.participantes-container {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.btn-eliminar {
+  background-color: #f44336;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.btn-eliminar:hover {
+  background-color: #d32f2f;
+}
+
+/* Modal de confirmación */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #d32f2f;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-footer button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-footer .btn-confirmar {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.modal-footer .btn-cancelar {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* Para mostrar un indicador de proceso mientras se elimina */
+.cargando {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-ocultar {
+  background-color: #ff9800;
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-ocultar:hover {
+  background-color: #e68a00;
+}
+
+/* Añadir efecto de desvanecimiento al ocultar */
+.fila-desvaneciendo {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Estilos para la página de seleccionar año */
+.seleccionar-anio-container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.select-anio {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.btn-generar {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-generar:hover {
+  background-color: #0b7dda;
+}
+
+/* Estilos específicos para reporte anual */
+.reporte-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.reporte-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.reporte-titulo {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.reporte-fecha {
+  color: #666;
+  font-style: italic;
+}
+
+.btn-exportar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.btn-imprimir {
+  background-color: #2196F3;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* Para versión de impresión */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .reporte-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .table-container {
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .reporte-table {
+    width: 100%;
+    font-size: 10px;
+  }
+  
+  .reporte-table th, 
+  .reporte-table td {
+    padding: 4px;
+  }
+}
+
+/* Agregar estilo para el mensaje de ocultamiento automático */
+.mensaje-ocultar {
+  color: #388e3c;
+  font-weight: bold;
+  font-style: italic;
+  padding: 5px;
+  text-align: center;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  animation: pulsar 1.5s infinite;
+}
+
+@keyframes pulsar {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.btn-actualizar {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-actualizar:hover {
+  background-color: #138496;
+}
+
+.btn-actualizar:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Estilos para la página de actualizar participante */
+.agregar-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.agregar-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#btnGuardar {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#btnGuardar:hover {
+  background-color: #45a049;
+}
+
+#btnRegresar {
+  background-color: #f44336;
+  color: white;
+}
+
+#btnRegresar:hover {
+  background-color: #d32f2f;
+}
+
+/* Ajustes para la tabla de seguimiento con nuevas columnas */
+.seguimiento-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+.seguimiento-table th, 
+.seguimiento-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.seguimiento-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.seguimiento-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.seguimiento-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Efecto de desvanecimiento para filas que se eliminan */
+.fila-desvaneciendo {
+  animation: desvanecer 0.5s forwards;
+}
+
+@keyframes desvanecer {
+  from { opacity: 1; }
+  to { opacity: 0; height: 0; padding: 0; margin: 0; border: 0; }
+}
+
+/* Mensaje de carga */
+.loading-message {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #777;
+}
+
+.celda-tiempo-restante {
+  font-weight: bold;
+  text-align: center;
+}
+
+.tiempo-normal {
+  color: #28a745; /* Verde */
+}
+
+.tiempo-advertencia {
+  color: #ffc107; /* Amarillo */
+}
+
+.tiempo-critico {
+  color: #dc3545; /* Rojo */
+  animation: parpadeo 1s infinite;
+}
+
+.tiempo-expirado {
+  color: #dc3545; /* Rojo */
+  text-decoration: line-through;
+}
+
+@keyframes parpadeo {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Estilos para la fila de tesistas demorados */
+.fila-demorada {
+  background-color: rgba(220, 53, 69, 0.1); /* Fondo rojo claro */
+}
+
+/* Estilos para el efecto de desvanecimiento */
+.fila-desvaneciendo {
+  animation: desvanecer 0.5s forwards;
+}
+
+@keyframes desvanecer {
+  from { opacity: 1; }
+  to { opacity: 0; height: 0; margin: 0; padding: 0; border: 0; }
+}
+
+/* Mensaje de ocultar tesista */
+.mensaje-ocultar {
+  color: #28a745;
+  font-style: italic;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Clase para fechas demoradas */
+.fecha-demorada {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Estilos para la tabla de seguimiento */
+.seguimiento-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.seguimiento-table th {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.seguimiento-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.seguimiento-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Mensaje de carga */
+.loading-message {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Botones */
+.btn-actualizar, .btn-eliminar {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-actualizar {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-enviar, .btn-demorados, .btn-volver, .btn-menu {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.btn-enviar {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-demorados {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-volver {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-menu {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Checkboxes personalizados */
+.checkbox-envio {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.menu-button-warning {
+  background-color: #dc3545; /* Rojo */
+  color: white;
+  border: 2px solid #c82333;
+  transition: all 0.3s ease;
+}
+
+.menu-button-warning:hover {
+  background-color: #bd2130;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+}
+
+/* Estilo base para todos los botones del menú */
+.menu-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: #0d8bf2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del menú principal */
+.menu-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-agregar-tiempo {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.btn-agregar-tiempo:hover {
+    background-color: #218838;
+}
+.btn-agregar-tiempo:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
